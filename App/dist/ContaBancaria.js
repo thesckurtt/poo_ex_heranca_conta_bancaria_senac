@@ -10,9 +10,9 @@ class ContaBancaria {
         this.saldo += valor;
     }
     sacar(valor) {
-        if (valor >= this.saldo) {
+        if (valor <= this.saldo) {
             this.saldo -= valor;
-            return { status: true, mensagem: `O valor ${valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })} foi sacado de sua conta. Saldo Atual: ${this.saldo}` };
+            return { status: true, mensagem: `O valor ${valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })} foi sacado de sua conta. Saldo Atual: ${(this.saldo).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}` };
         }
         else {
             return { status: false, mensagem: `Não há saldo suficiente para realizar essa operação.` };

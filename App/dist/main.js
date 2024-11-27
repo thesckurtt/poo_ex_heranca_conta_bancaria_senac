@@ -22,6 +22,11 @@ while (mainLoopControl) {
             (0, Screens_1.showInConsole)(`Número da conta: ${contaPoupanca.getInfo().numeroConta}`);
             (0, Screens_1.showInConsole)(`Saldo da conta: ${contaPoupanca.getInfo().saldo}`);
             break;
+        case "4":
+            let inptSaque = Number(myPrompt("Valor a ser sacado: "));
+            let result = contaPoupanca.sacar(inptSaque);
+            (0, Screens_1.showInConsole)(`Status: ${result.status ? "Sucesso" : "Erro"} - ${result.mensagem} `);
+            break;
     }
     if ((inpt === null || inpt === void 0 ? void 0 : inpt.toLocaleLowerCase()) == "s" || inpt == "5") {
         mainLoopControl = false;
