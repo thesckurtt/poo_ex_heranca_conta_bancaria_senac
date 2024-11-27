@@ -1,0 +1,17 @@
+{
+  "name": "ex_heranca_conta_bancaria",
+  "version": "1.0.0",
+  "main": "App/dist/main.js",
+  "scripts": {
+    "start": "node dist/main.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0"
+  }
+}
